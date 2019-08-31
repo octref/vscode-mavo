@@ -1,0 +1,352 @@
+{
+  "version": 1.1,
+  "globalAttributes": [
+    {
+      "name": "mv-app",
+      "description": {
+        "kind": "markdown",
+        "value": "Allows you to assign an id to your app, which is used in a number of places. The element with this attribute is called the **Mavo root**.\n\nOn: Mavo root\t"
+      },
+      "references": [
+        {
+          "name": "Mavo Primer",
+          "url": "https://mavo.io/docs/primer/#mv-app"
+        }
+      ]
+    },
+    {
+      "name": "property",
+      "description": {
+        "kind": "markdown",
+        "value": "Names elements that will be saved, edited, or used in [expressions](https://mavo.io/docs/expressions). Elements with this attribute are called **Properties**."
+      },
+      "references": [
+        {
+          "name": "Mavo Properties",
+          "url": "https://mavo.io/docs/properties"
+        }
+      ]
+    },
+    {
+      "name": "mv-storage",
+      "description": {
+        "kind": "markdown",
+        "value": "Tells Mavo where data is stored. It’s used on the Mavo root with any of the accepted values or optionally on individual properties to prevent them from being stored (`mv-storage=\"none\"`).\n\nOn: Mavo root, properties\n\nLive: yes"
+      },
+      "references": [
+        {
+          "name": "Mavo Storage",
+          "url": "https://mavo.io/docs/storage"
+        }
+      ]
+    },
+    {
+      "name": "typeof",
+      "description": {
+        "kind": "markdown",
+        "value": "The value of this property element is not just an attribute or its text content, but the union of the values of the properties inside it. This is almost always inferred from the structure of your properties and added automatically, but you can use it to force an element to be a group, or to declare the type of the group (e.g. `typeof=\"Person\"`) for better semantic value. Elements with this attribute are called **groups**, objects, or complex properties.\n\nOn: Properties"
+      }
+    },
+    {
+      "name": "mv-multiple",
+      "description": {
+        "kind": "markdown",
+        "value": "Makes elements repeatable. Only has meaning on property elements, if there is no `property` attribute, one will be added automatically with a generated name like \"collection\". Elements with this attribute are called **Collections**.\t\n\nOn: Properties"
+      },
+      "references": [
+        {
+          "name": "Mavo Collections",
+          "url": "https://mavo.io/docs/collections"
+        }
+      ]
+    },
+    {
+      "name": "mv-attribute",
+      "description": {
+        "kind": "markdown",
+        "value": "Override the defaults for which attribute holds the data for this element. For no attribute (element content), specify `\"none\"`.\n\nOn: Properties, elements with `mv-value`"
+      },
+      "references": [
+        {
+          "name": "Mavo Properties",
+          "url": "https://mavo.io/docs/properties/#mv-attribute"
+        }
+      ]
+    },
+    {
+      "name": "mv-action",
+      "description": {
+        "kind": "markdown",
+        "value": "Run an action that modifies the data when an element is clicked or a form is submitted.\n\nLive: expressions"
+      },
+      "references": [
+        {
+          "name": "Mavo Actions",
+          "url": "https://mavo.io/docs/actions"
+        }
+      ]
+    },
+    {
+      "name": "mv-source",
+      "description": {
+        "kind": "markdown",
+        "value": "If specified, it is used instead of `mv-storage` for loading data. Useful when you want to read from one location and write to a different location. Same values as `mv-storage`.\n\nOn: Mavo root\n\nLive: yes"
+      },
+      "references": [
+        {
+          "name": "Mavo Storage",
+          "url": "https://mavo.io/docs/storage"
+        }
+      ]
+    },
+    {
+      "name": "mv-init",
+      "description": {
+        "kind": "markdown",
+        "value": "If no data is stored, `mv-init` will be used to load initial data. Same values as `mv-storage`.\n\nOn: Mavo root\n\nLive: yes"
+      },
+      "references": [
+        {
+          "name": "Mavo Storage",
+          "url": "https://mavo.io/docs/storage"
+        }
+      ]
+    },
+    {
+      "name": "mv-default",
+      "description": {
+        "kind": "markdown",
+        "value": "Sets the default value. If no value, the default value becomes the property content.\n\nOn: Properties\n\nLive: yes"
+      },
+      "references": [
+        {
+          "name": "Mavo Properties",
+          "url": "https://mavo.io/docs/properties/#mv-default"
+        }
+      ]
+    },
+    {
+      "name": "mv-order",
+      "description": {
+        "kind": "markdown",
+        "value": "Values: `desc` or `asc`. Controls the order that new items are added to collections.\n\nOn: Collections"
+      },
+      "references": [
+        {
+          "name": "Mavo Collections",
+          "url": "https://mavo.io/docs/collections/#mv-order"
+        }
+      ]
+    },
+    {
+      "name": "mv-expressions",
+      "description": {
+        "kind": "markdown",
+        "value": "Change the expression syntax or disable [expressions](https://mavo.io/docs/expressions) altogether."
+      },
+      "references": [
+        {
+          "name": "Mavo Expressions",
+          "url": "https://mavo.io/docs/expressions#using-expressions"
+        }
+      ]
+    },
+    {
+      "name": "mv-expressions-ignore",
+      "description": {
+        "kind": "markdown",
+        "value": "Disable expressions on specific attributes"
+      },
+      "references": [
+        {
+          "name": "Mavo Expressions",
+          "url": "https://mavo.io/docs/expressions#disabling-expressions"
+        }
+      ]
+    },
+    {
+      "name": "mv-value",
+      "description": {
+        "kind": "markdown",
+        "value": "Set an element's content to the result of an [expressions](https://mavo.io/docs/expressions/#providing-fallbacks-the-mv-value-attribute).\n\nLive: expressions"
+      },
+      "references": [
+        {
+          "name": "Mavo Expressions",
+          "url": "https://mavo.io/docs/expressions/#providing-fallbacks-the-mv-value-attribute"
+        }
+      ]
+    },
+    {
+      "name": "mv-if",
+      "description": {
+        "kind": "markdown",
+        "value": "Remove an element from the DOM if the expression doesn't match and re-add it when it does.\n\nLive: expressions"
+      },
+      "references": [
+        {
+          "name": "Mavo Expressions",
+          "url": "https://mavo.io/docs/expressions/#conditionals-if-and-the-mv-if-attribute"
+        }
+      ]
+    },
+    {
+      "name": "mv-accepts",
+      "description": {
+        "kind": "markdown",
+        "value": "Property names (space separated) of other collections that can move items to this one.\n\nOn: Collections"
+      },
+      "references": [
+        {
+          "name": "Mavo Collections",
+          "url": "https://mavo.io/docs/collections/#mv-accepts"
+        }
+      ]
+    },
+    {
+      "name": "mv-edit",
+      "description": {
+        "kind": "markdown",
+        "value": "Customize how an element is edited by linking to another element, anywhere in the page.\n\nOn: Properties\n\nLive: initially"
+      },
+      "references": [
+        {
+          "name": "Mavo Properties",
+          "url": "https://mavo.io/docs/properties/#mv-edit"
+        }
+      ]
+    },
+    {
+      "name": "mv-edit-*",
+      "description": {
+        "kind": "markdown",
+        "value": "Any attributes set this way will be copied over to the property's editor.\n\nOn: Properties\n\nLive: initially"
+      },
+      "references": [
+        {
+          "name": "Mavo Properties",
+          "url": "https://mavo.io/docs/properties/#mv-edit-star"
+        }
+      ]
+    },
+    {
+      "name": "mv-mode",
+      "description": {
+        "kind": "markdown",
+        "value": "Control whether a property is in read or edit mode independently of the mode of the rest of the Mavo app.\n\nLive: yes"
+      },
+      "references": [
+        {
+          "name": "Mavo Properties",
+          "url": "https://mavo.io/docs/properties/#mv-mode"
+        }
+      ]
+    },
+    {
+      "name": "mv-format",
+      "description": {
+        "kind": "markdown",
+        "value": "Render and edit only a subset of the remote data, by providing a (slash-separated) path to the data it handles.\n\nOn: Mavo root\n\nLive: initially"
+      },
+      "references": [
+        {
+          "name": "Mavo Formats",
+          "url": "https://mavo.io/docs/formats"
+        }
+      ]
+    },
+    {
+      "name": "mv-autosave",
+      "description": {
+        "kind": "markdown",
+        "value": "Save automatically when the data changes, either immediately or at most every N seconds.\n\nOn: Mavo root\n\nLive: initially"
+      },
+      "references": [
+        {
+          "name": "Mavo Storage",
+          "url": "https://mavo.io/docs/storage/#autosave"
+        }
+      ]
+    },
+    {
+      "name": "mv-bar",
+      "description": {
+        "kind": "markdown",
+        "value": "Control which buttons may appear in the toolbar and in what order, or hide the toolbar completely.\n\nOn: Mavo root"
+      },
+      "references": [
+        {
+          "name": "Mavo UI-Customization",
+          "url": "https://mavo.io/docs/ui/#bar"
+        }
+      ]
+    },
+    {
+      "name": "mv-path",
+      "description": {
+        "kind": "markdown",
+        "value": "Render and edit only a subset of the stored data.\n\nOn: Properties\n\nLive: initially"
+      }
+    },
+    {
+      "name": "mv-multiple-path",
+      "description": {
+        "kind": "markdown",
+        "value": "Same as `mv-path` but applies to the collection itself, not the item(s).\n\nOn: Collections"
+      }
+    },
+    {
+      "name": "mv-alias",
+      "description": {
+        "kind": "markdown",
+        "value": "If provided, Mavo will read data from this property **instead** of its real property name. Useful to read stored data properly after renaming a property in the HTML.\n\nOn: Properties"
+      },
+      "references": [
+        {
+          "name": "Mavo Migration",
+          "url": "https://mavo.io/docs/migration/#mv-alias"
+        }
+      ]
+    },
+    {
+      "name": "mv-initial-items",
+      "description": {
+        "kind": "markdown",
+        "value": "How many items should the collection start with? If not provided, it is 1, unless `mv-like` is also specified, in which case it's 0 (to prevent infinite recursion).\n\nOn: Collections"
+      }
+    },
+    {
+      "name": "mv-uploads",
+      "description": {
+        "kind": "markdown",
+        "value": "Sets the local path for uploads. Mandatory to enable uploads on `<a>` and `<link>`.\n\nOn: Properties"
+      },
+      "references": [
+        {
+          "name": "Mavo Storage",
+          "url": "https://mavo.io/docs/storage#uploads"
+        }
+      ]
+    },
+    {
+      "name": "mv-upload-url",
+      "description": {
+        "kind": "markdown",
+        "value": "Sets the URL for serving uploaded resources from."
+      },
+      "references": [
+        {
+          "name": "Mavo Storage",
+          "url": "https://mavo.io/docs/storage#uploads"
+        }
+      ]
+    },
+    {
+      "name": "aria-label",
+      "description": {
+        "kind": "markdown",
+        "value": "Sets or contains the label the property will use during editing.\n\nOn: Simple properties\n\nLive: yes"
+      }
+    }
+  ]
+}

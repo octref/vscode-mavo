@@ -1,0 +1,30 @@
+{
+  "name": "vscode-mavo",
+  "displayName": "Mavo",
+  "description": "Mavo extension for VS Code",
+  "version": "0.1.0",
+  "publisher": "octref",
+  "repository": "https://github.com/octref/vscode-mavo",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.38.0"
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/got": "^9.6.7",
+    "@types/node": "^12.7.3",
+    "got": "^9.6.0",
+    "typescript": "^3.6.2",
+    "vscode-html-languageservice": "^3.0.4-next.2"
+  },
+  "contributes": {
+    "html": {
+      "customData": [ 
+        "./data/mavo.json"
+      ]
+    }
+  }
+}
