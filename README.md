@@ -1,6 +1,6 @@
 # Mavo
 
-[Mavo](https://github.com/mavoweb/mavo) extension for VS Code, using the [custom data](https://github.com/microsoft/vscode-custom-data) contribution point.
+[Mavo](https://mavo.io/) extension for VS Code that offers auto completion and hover information for all [Mavo attributes](https://mavo.io/docs/). This extension uses the [vscode-custom-data](https://github.com/microsoft/vscode-custom-data) extension Contribution Point.
 
 ## Demo
 
